@@ -5,6 +5,7 @@ const postController=require("../Server/Post/postController");
 const queryController=require("../Server/Query/queryController");
 const rateController=require("../Server/Rating/rateController");
 const bidController=require("../Server/Bid/bidController");
+const taskController=require("../Server/Task/taskController")
 
 router.post("/tech/add",techController.add)
 router.post("/tech/getall",techController.getall)
@@ -39,5 +40,11 @@ router.post("/bid/getall",bidController.getall)
 router.post("/bid/getsingle",bidController.getsingleData)
 router.post("/bid/delete",bidController.deletedata)
 router.post("/bid/update",bidController.updateData)
+
+router.post("/task/add",taskController.add)
+router.post("/task/getall",taskController.getall)
+router.post("/task/getsingle",taskController.getsingleData)
+router.post("/task/delete",taskController.deleteData)
+router.post("/task/update",taskController.updateData)
 
 module.exports=router
