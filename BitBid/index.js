@@ -1,6 +1,8 @@
 const express=require("express");
 const app=express();
 const port=9090;
+const seeder=require("./Config/seeder")
+seeder.adminSeeder()
 
 const config=require("./Config/db");
 
